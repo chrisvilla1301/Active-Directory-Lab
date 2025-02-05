@@ -69,7 +69,7 @@ You can now Power on the Virtual Machine.
 
 Once powered on the Windows Server ISO that was selected should boot up. If you did not select an ISO image before here you will be promted to select one.
 
-Allow it to boot up and simply go through the set up / installation process. :
+Allow it to boot up and simply go through the set up / installation process. Installation may take a while, just allow it to do its thing. :
 
 <br/><img src="https://i.imgur.com/2FBCR02.png"/>
 
