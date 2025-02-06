@@ -124,7 +124,7 @@ Just something useful to note: The address "127.0.0.1" is the "Loopback" address
 
 <br/><img src="https://i.imgur.com/QNqhnjE.png"/>
 
-Now that your IP settings are configured we will be adding Active Directory Domain Services as well as promoting the server to a Domaain.
+Now that your IP settings are configured we will be adding Active Directory Domain Services as well as promoting the server to a Domain.
 
 Open Server Manager and click "Add roles and features" :
 
@@ -143,13 +143,13 @@ Select your server and click Next :
 
 Select "Active Directory Domain Services". Make sure not to select any of the other Active Directory features.
 
+<br/><img src="https://i.imgur.com/Grmt2RP.png"/>
+
 Next...Next...Next...Install
 
 Wait for the installation to complete
 
 Close once it has finished installing :
-
-<br/><img src="https://i.imgur.com/Grmt2RP.png"/>
 
 <br/><img src="https://i.imgur.com/SwC0vlv.png"/>
 
