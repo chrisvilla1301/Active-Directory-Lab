@@ -173,7 +173,7 @@ Wait for it to install :
 
 <br/><img src="https://i.imgur.com/zEPs0tw.png"/>
 
-Once it's finished installing, you will be signed out and the VM will restart.
+Once it's finished installing, the VM will restart.
 
 <br/><img src="https://i.imgur.com/T52Vm4n.png"/>
 
