@@ -98,41 +98,80 @@ If IPv4 Address is:
 
 "169.?.?.etc..." = Internal network
 
-Since this network has an IP address of "169.254.31.22" I now know this is my Internal network
+Since this network has an IP address of "169.254.31.22" I now know this is my Internal network :
+
 <br/><img src="https://i.imgur.com/pWuJRN3.png"/>
 
-Since this network has an IP address of "10.0.2.15" I now know this is my Home IP Address / Internet
+Since this network has an IP address of "10.0.2.15" I now know this is my Home IP Address / Internet :
+
 <br/><img src="https://i.imgur.com/47YzofJ.png"/>
 
-Once you know which network is which be sure to rename them accordingly as we will be using this later.
+Once you know which network is which be sure to rename them accordingly as you will be using this later.
 
 <br/><img src="https://i.imgur.com/MDRcoPp.png"/>
 
-<br/><img src=""/>
+Now that you've identified your networks, we can configure the IP settings.
 
-<br/><img src=""/>
+Right click on your Internal network and select "Properties", then select "Internal Protocol Version 4 (TCP/IPv4)"
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/zD5DImH.png"/>
 
-<br/><img src=""/>
+Select "Use the following IP address:" and enter the same info displayed in the image. (No time to explain IP addresses here so just trust)
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/VcxYL1j.png"/>
 
-<br/><img src=""/>
+Just something useful to note: The address "127.0.0.1" is the "Loopback" address. This is an address that allows a computer to refer to itself. You can use the loopback address or just use the same address you are trying to refer back to.
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/QNqhnjE.png"/>
 
-<br/><img src=""/>
+Now that your IP settings are configured we will be adding Active Directory Domain Services as well as promoting the server to a Domaain.
 
-<br/><img src=""/>
+Open Server Manager and click "Add roles and features" :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/sQ2vC7K.png"/>
 
-<br/><img src=""/>
+Next...Next...
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/DBj1G6O.png"/>
 
-<br/><img src=""/>
+
+<br/><img src="https://i.imgur.com/AvU10ML.png"/>
+
+Select your server and click Next :
+
+<br/><img src="https://i.imgur.com/I3zztJU.png"/>
+
+Select "Active Directory Domain Services". Make sure not to select any of the other Active Directory features.
+
+Next...Next...Next...Install
+
+Wait for the installation to complete
+
+Close once it has finished installing :
+
+<br/><img src="https://i.imgur.com/Grmt2RP.png"/>
+
+<br/><img src="https://i.imgur.com/SwC0vlv.png"/>
+
+Now that the features are installed, you can promote the server to a Domain
+
+Click the Flag icon on the top right and select "Promote this server to a domain controller" :
+
+<br/><img src="https://i.imgur.com/lB4zC72.png"/>
+
+Select "Add a new forest" and name the domain whatever you'd like. For the lab I just named it "mydomain.com"
+
+<br/><img src="https://i.imgur.com/v8BKPu3.png"/>
+
+You won't really need this but just fill it out anyways. I just used the password "Password1" for the lab.
+
+<br/><img src="https://i.imgur.com/gEetRiM.png"/>
+
+Next...Next...Next...Install
+
+Wait for it to install :
+
+<br/><img src="https://i.imgur.com/zEPs0tw.png"/>
 
 <br/><img src=""/>
 
