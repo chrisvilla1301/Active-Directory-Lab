@@ -177,31 +177,66 @@ Once it's finished installing, the VM will restart.
 
 <br/><img src="https://i.imgur.com/T52Vm4n.png"/>
 
-<br/><img src=""/>
+Once your VM's booted back up go to the search icon in the taskbar and search for "Active Directory Users and Computers". Open the application. :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/OrxTZPm.png"/>
 
-<br/><img src=""/>
+Now you're going to create an Admin account for yourself instead of using the built-in Administrator account.
 
-<br/><img src=""/>
+Right click on the domain name, select "New" then select "Organizational Unit" :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/SesQCRL.png"/>
 
-<br/><img src=""/>
+Name it something like "Admin Users" or "ADMINS", "Admin Accounts" , etc.
+Click "OK"
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/SYN39k9.png"/>
 
-<br/><img src=""/>
+Right click on your admins folder you just created, select "New" and select "User"
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/sFVFIPV.png"/>
 
-<br/><img src=""/>
+Fill out your info with your name or whatever name you prefer. I used my name as an example.
+My user logon name is my first initial with my last name. "a-" is just used to signify that it is an admin user.
+Hit "Next"
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/a2G1slY.png"/>
 
-<br/><img src=""/>
+Create a password. I am using "Password1" for all passwords in this lab.
+Normally you would not uncheck "User must change password at next login" or have "Password never expires" checked, but we will only do this for the purpose of this lab.
 
-<br/><img src=""/>
+Click "Next" 
+
+<br/><img src="https://i.imgur.com/pbQQdyM.png"/>
+
+Your Admin account is created, now you just need to configure it into an admin account.
+
+<br/><img src="https://i.imgur.com/QIMbguR.png"/>
+
+Right click on your account and hit "Properties"
+
+<br/><img src="https://i.imgur.com/a4IC7sU.png"/>
+
+Select "Member of" and then select "Add..."
+
+<br/><img src="https://i.imgur.com/q5hir4h.png"/>
+
+Enter "domain admins" to the box, click "Check Names", then click "OK"
+
+<br/><img src="https://i.imgur.com/5QRTo7H.png"/>
+
+Apply :
+
+<br/><img src="https://i.imgur.com/tup4cK4.png"/>
+
+Your Admin account is now ready for use!
+
+<br/><img src="https://i.imgur.com/i5D7G0q.png"/>
+
+Now we're going to try logging into it.
+Log out and select "Other user"
+
+<br/><img src="https://i.imgur.com/tSClyxS.png"/>
 
 <br/><img src=""/>
 
