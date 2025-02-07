@@ -4,15 +4,23 @@
 Project consists of creating an Active Directory environment using Oracle Virtual Box.
 
 <h2>What you will learn in this lab</h2>
+
 - How to create Virtual Machines in Oracle Virtual Box
+ 
 - How to create a functional Windows Server
+  
 - How to promote a server to a domain
+ 
 - Basic Windows Networking
+ 
 - Basic Active Directory configuring
+  
 - Basic DHCP Configuring / Creating scopes
+ 
 - How to create user accounts with PowerShell
+  
 - How to create a client and connect it to a domain
-n
+
 
 <h2>Applications and Utilities Used</h2>
 
