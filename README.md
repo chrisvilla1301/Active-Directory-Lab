@@ -1,33 +1,54 @@
 <h2>Active Directory Lab</h1>
 
 <h2>Description</h2>
-Project consists of creating an Active Directory environment using Oracle Virtual Box. This tutorial will walk you through creating Virtual Machines, creating a functional Windows Server, Promoting a server to a Domain, Basic Windows Networking, Scopes, Creating user accounts and configuring roles and permissions. 
-<br />
+Project consists of creating an Active Directory environment using Oracle Virtual Box.
+
+<h2>What you will learn in this lab</h2>
+- How to create Virtual Machines in Oracle Virtual Box
+- How to create a functional Windows Server
+- How to promote a server to a domain
+- Basic Windows Networking
+- Basic Active Directory configuring
+- Basic DHCP Configuring / Creating scopes
+- How to create user accounts with PowerShell
+- How to create a client and connect it to a domain
+n
+
+<h2>Applications and Utilities Used</h2>
 
 
-<h2>Languages and Utilities Used</h2>
-
-- <b>PowerShell</b> 
-- <b>Active Directory</b>
 - <b>Oracle Virtual Box<b>
+- <b>Server Manager<b>
+- <b>IPv4<b>
+- <b>Active Directory</b>
+- <b>Routing and Remote Access<b>
 - <b>DHCP<b>
+- <b>PowerShell</b>
   
 
-<h2>Environments Used </h2>
+<h2>Windows Versions Used </h2>
 
-- <b>Windows 10</b>
+- <b>Windows 10 Pro</b>
+- <b>Windows Server 2022</b>
 
 <h2>What you will need before we start:</h2>
 
 - <b>Oracle Virtual Box - You can install it here: (add link)<b>
  
-- <b>Windows Server ISO -</b>
+- <b>Windows Server ISO: -</b>
   
-- <b>Windows 10 ISO -</b>
+- <b>Windows 10 ISO: -</b>
+
+- <b>PowerShell Script (1000+ Users) </b>
+
+Here is a diagraham of what we will be doing. Make sure to save this to help you while going through this lab : 
+
+<br/><img src="https://i.imgur.com/KoGeluD.png"/>
 
 <h2>Lab walk-through:</h2>
 
 <p align="center">
+
 
 Open Oracle Virtual Box and click "New". 
  
@@ -37,7 +58,9 @@ Select the folder you'd like to save your Virtual Machine to.
 
 Select the Windows Server ISO image you installed.
 
-Select the edition and version :
+Select the edition and version
+
+You can check "Skip unattended installation" :
 
 <br/><img src="https://i.imgur.com/c2goCEh.png"/>
 
@@ -126,7 +149,7 @@ Just something useful to note: The address "127.0.0.1" is the "Loopback" address
 
 Now that your IP settings are configured we will be adding Active Directory Domain Services as well as promoting the server to a Domain.
 
-Open Server Manager and click "Add roles and features" :
+Open Server Manager and click "Add roles and features" (You will be doing this a lot) :
 
 <br/><img src="https://i.imgur.com/sQ2vC7K.png"/>
 
@@ -234,213 +257,371 @@ Your Admin account is now ready for use!
 <br/><img src="https://i.imgur.com/i5D7G0q.png"/>
 
 Now we're going to try logging into it.
-Log out and select "Other user"
+Log out and select "Other user" aand enter your login info :
 
 <br/><img src="https://i.imgur.com/tSClyxS.png"/>
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/PnCOsSB.png"/>
 
-<br/><img src=""/>
+Now we're signed in to our Admin account!
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/kQ1BpBx.png"/>
 
-<br/><img src=""/>
+Next we're going to install RAS / NAT . This will allow our client (once we create our client VM later) to be on a virtual "private" network but still be able to access the internet through the domain.
 
-<br/><img src=""/>
+Open Server Manager and click "Add roles and features" :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/kdkq9lm.png"/>
 
-<br/><img src=""/>
+Next...Next...Select your server...Next :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/N5cktOA.png"/>
 
-<br/><img src=""/>
+Select "Remote Access" and hit Next :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/83S1M8e.png"/>
 
-<br/><img src=""/>
+Select "Routing" and hit Next :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/aCNZRVI.png"/>
 
-<br/><img src=""/>
+Select Install and wait for the features to install :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/kLH1ECh.png"/>
 
-<br/><img src=""/>
+Once finished, select "Tools" on the top right and select "Routing and Remote Access" :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/XfK0SjS.png"/>
 
-<br/><img src=""/>
+Right click on your server and select "Configure and Enable Routing and Remote Access" :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/TxvlSJD.png"/>
 
-<br/><img src=""/>
+Next :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/kQ6hPtT.png"/>
 
-<br/><img src=""/>
+Select "NAT" and hit Next :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/3Rfqrdk.png"/>
 
-<br/><img src=""/>
+You should see your network connections inside the box.
+If there's nothing or it's grayed out for you just exit out and reopen the "Routing and Remote Access" tool:
 
-<br/><img src=""/>
+Once you see your network connections select your Internet and hit Next :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/QyIhck0.png"/>
 
-<br/><img src=""/>
+Finish :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/bn2wnki.png"/>
 
-<br/><img src=""/>
+If you refresh your server you can now see the symbol has turned green
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/aehzagr.png"/>
 
-<br/><img src=""/>
+Now that we have completed that we will set up a DHCP Server :
 
-<br/><img src=""/>
+Open Server Manager and select "Add roles and features" :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/XK8BhUi.png"/>
 
-<br/><img src=""/>
+Next...Next...select your server...Next :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/PnkIsRK.png"/>
 
-<br/><img src=""/>
+Select "DHCP Server" and hit Next :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/2rB8gNF.png"/>
 
-<br/><img src=""/>
+Install and wait for it to finish installing :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/vOOcrmC.png"/>
 
-<br/><img src=""/>
+Once finished select "Tools" and select "DHCP"
+The purpose of this is to automatically give each client computer connected to the Network an IP address  :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/006GE20.png"/>
 
-<br/><img src=""/>
+Right click on "IPv4" and select "New Scope..." :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/7FA7ZlC.png"/>
 
-<br/><img src=""/>
+Here it's useful to name the scope the same as the IP address. I named it "172.16.0.100-200" since we will give IP addreses within this range :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/VajdRX4.png"/>
 
-<br/><img src=""/>
+Here simply copy the info below and hit Next :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/BkhN659.png"/>
 
-<br/><img src=""/>
+Yes...Next :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/hpLbhRJ.png"/>
 
-<br/><img src=""/>
+Enter "172.16.0.1" and make sure to click "Add" before selecting Next :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/AtXAFpT.png"/>
 
-<br/><img src=""/>
+Next :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/CO2Cthp.png"/>
 
-<br/><img src=""/>
+Yes...Next :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/N0HJ8Tt.png"/>
 
-<br/><img src=""/>
+Finish :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/3lNe7jV.png"/>
 
-<br/><img src=""/>
+You might need to "Authorize". Right click on the server and select "Authorize" then "Refresh" :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/FdDcLyi.png"/>
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/SlNcoZR.png"/>
 
-<br/><img src=""/>
+Now you can see both icons have turned green
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/cFi9gA8.png"/>
 
-<br/><img src=""/>
+Next we will disable IE Enhanced Security only for the purpose of this lab. Normally you would not do this in a work environment.
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/Qlqw14P.png"/>
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/y7bDDee.png"/>
 
-<br/><img src=""/>
+Next we are going to create a bunch of users for our server using PowerShell.
 
-<br/><img src=""/>
+First open the "AD_PS_master" folder previously downloaded. This is a script that we will Run in Windows PowerShell that will automatically generate 1000+ users for our server. This will allow you to get a more realistic feel of a real life IT work environment and allow you to play around with it.
 
-<br/><img src=""/>
+NOTE: All users will have a username consisting of their first initial + their last name. All passwords will be "Password1" for the purpose of this lab.
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/auhnrNN.png"/>
 
-<br/><img src=""/>
+Open the "names" .txt file :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/ggTv9nw.png"/>
 
-<br/><img src=""/>
+At the top I put my name as an example but you can use whatever you'd like. This will be our client user :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/ouHpNiO.png"/>
 
-<br/><img src=""/>
+Next search for "Windows PowerShell ISE" and Run as Administrator :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/RS9Y7W2.png"/>
 
-<br/><img src=""/>
+Select "File" and "Open..." :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/dklJrq2.png"/>
 
-<br/><img src=""/>
+Now select "1_CREATE _USERS" from wherever you saved the "AD_PS_master" folder and click Open
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/VcxU9pu.png"/>
 
-<br/><img src=""/>
+You'll see if you try to Run the script you'll get an error :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/oRk6u8M.png"/>
 
-<br/><img src=""/>
+To fix this error enter "Set-ExecutionPolicy Unrestricted" and hit enter.
+Select "Yes to all"
+This allows you to run all scripts :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/MxMRXt8.png"/>
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/tPpIHgM.png"/>
 
-<br/><img src=""/>
+Before running the script you need to be in the same directory as the script for it to work.
+Enter "cd c:users\(your user account)\(wherever you saved the folder to)\AD_PS_master" and hit enter :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/X8Ujt4c.png"/>
 
-<br/><img src=""/>
+If you enter "ls" you can see now you're inside the same directory as the script.
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/Lm7AdNA.png"/>
 
-<br/><img src=""/>
+Now you can run the script! Click "Run" and select "Run once"
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/nPduQ0h.png"/>
 
-<br/><img src=""/>
+Now just allow it to finish generating users for you.
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/fRRqVK9.png"/>
 
-<br/><img src=""/>
+You may notice a few errors, they are simply duplicate names so nothing to worry about :
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/DFSBcWC.png"/>
 
-<br/><img src=""/>
+Once it has finished, you can open Active Directory Users and Computers, and now you'll see a "_USERS" folder has been created from the script. If you click on it you can see all the users that were created.
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/VRUO6lS.png"/>
 
-<br/><img src=""/>
+Let's search for our user account!
+Right click on the server and select "Find..."
 
-<br/><img src=""/>
+<br/><img src="https://i.imgur.com/uPQwgBR.png"/>
 
-<br/><img src=""/>
+Enter the name you typed into the script .txt file earlier and select "Find Now"
 
-<br/><img src=""/>
-<!--
- ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
---!>
+<br/><img src="https://i.imgur.com/iiBRhIn.png"/>
+
+As you can see we have 2 user accounts that were found (if you used the same name). One user is the Domain Admin account we created earlier, and the other is our user account that was just created with our batch of users.
+We will be logging into our client VM using our new user account.
+
+<br/><img src="https://i.imgur.com/ejurxeo.png"/>
+
+Cool! Almost finished! The last thing we need to do now is create a new virtual machine for our Windows 10 client and connect it to our server. :
+
+Go back to Oracle Virtual Box and select "New"
+
+<br/><img src="https://i.imgur.com/TbqmMbu.png"/>
+
+I simply named mine "CLIENT1" but you can name it whatever you'd like.
+
+Select the folder you'd like to save your Virtual Machine to.
+
+Select the Windows 10 ISO image you installed
+
+Select the edition and version
+
+You can check "Skip unattended installation" :
+
+<br/><img src="https://i.imgur.com/msfsz1Z.png"/>
+
+Go to "Hardware" and select how much RAM you want to give your VM
+
+If you aren't sure you can simply leave it as is :
+
+<br/><img src="https://i.imgur.com/2zPc1By.png"/>
+
+Select "Hard Disk".
+
+Select how much memory you want to give to your VM. Again, be aware of how much memory your computer has to spare.
+
+Once selected click "Finish"
+
+<br/><img src="https://i.imgur.com/n2GW9zU.png"/>
+
+Before powering on the VM we are going to configure a few things.
+Right click the client VM and select "Settings"
+
+Change Shared Clipboard and Drag'n'drop to "Bidirectional"
+
+<br/><img src="https://i.imgur.com/JEMabzv.png"/>
+
+Then go to the "Network" tab. Since we're emulating a "Corporate" network change the "Attached to" to "Internal Network"
+
+Hit OK and now you can power on the client machine :
+
+<br/><img src="https://i.imgur.com/lyXurfl.png"/>
+
+Once the machine has booted up simply go through the setup : 
+
+<br/><img src="https://i.imgur.com/J1g9Dnx.png"/>
+
+<br/><img src="https://i.imgur.com/F1Y9I09.png"/>
+
+Make sure to select "Windows 10 Pro" as you cannot connect to the domain with the Home edition of Windows
+
+<br/><img src="https://i.imgur.com/Dhw3tuI.png"/>
+
+Next :
+
+<br/><img src="https://i.imgur.com/VUXY46g.png"/>
+
+Select "Custom" since we have nothing on the hard drive
+
+<br/><img src="https://i.imgur.com/PYA0S1z.png"/>
+
+Hit Next and allow it to install and reboot itself. This may take a while. :
+
+<br/><img src="https://i.imgur.com/ypqwnPF.png"/>
+
+<br/><img src="https://i.imgur.com/4e18IQR.png"/>
+
+<br/><img src="https://i.imgur.com/21NQKd1.png"/>
+
+Once it has rebooted go through the setup :
+
+<br/><img src="https://i.imgur.com/QaE61JW.png"/>
+
+If promted to select an internet connection just click "I don't have internet"
+
+Make sure to click "Limited experience" if you get this window so you aren't promted to create a Microsoft account. You want to keep it as a local / home account :
+
+<br/><img src="https://i.imgur.com/BwdH4uD.png"/>
+
+I named mine "user" but you can use whatever you'd like.
+
+<br/><img src="https://i.imgur.com/tF2LdgB.png"/>
+
+Just click Next, you don't need to enter a password here. :
+
+<br/><img src="https://i.imgur.com/UFQG2QK.png"/>
+
+I disabled all of these features but that's personal preference, you can just hit Next or Accept if you'd like :
+
+<br/><img src="https://i.imgur.com/IzIyNpk.png"/>
+
+Allow the VM to start up :
+
+<br/><img src="https://i.imgur.com/ygtqyIz.png"/>
+
+<br/><img src="https://i.imgur.com/P86V0kC.png"/>
+
+The client VM is now created
+
+<br/><img src="https://i.imgur.com/zcBFWUf.png"/>
+
+Now we are going to check our IP addresses. Open command line and enter "ipconfig".
+Your client computer should have a Default Gateway address.
+
+<br/><img src="https://i.imgur.com/cVuH2ZH.png"/>
+
+If you do not have a Default Gateway address this means you did not click "Add" back when we created a Scope for your server. Simply go back to your WINDOWS SERVER VIRTUAL MACHINE (NOT YOUR CLIENT VIRTUAL MACHINE), and go back to the DHCP tool to add the IP address.
+
+<br/><img src="https://i.imgur.com/AtXAFpT.png"/>
+
+Click the Start button and go to "System" 
+
+Scroll down until you find "Rename this PC (advanced)" and click it. This should open the System Properties window. Click "Change".
+
+Here we are going to rename the PC to "CLIENT1" and also join the Domain. After you've renamed your PC select the "domain" option under "Member of". Enter your domain name and click OK. This should prompt you to enter a domain admin account. Enter your domain admin account you created earlier and click OK. 
+
+Allow the system to Restart :
+
+<br/><img src="https://i.imgur.com/1K0pa2J.png"/>
+
+<br/><img src="https://i.imgur.com/hcTNtnp.png"/>
+
+<br/><img src="https://i.imgur.com/cYkLyfQ.png"/>
+
+If you go back to your Domain Controller (WINDOWS SERVER VM) and go into your DHCP tool > IPv4 > Scope > Address Leases you are able to see the IP addresses automatically assigned to your clients by DHCP when they are connected to the network. Here we only have one but in a work environment you would probably have hundreds of addresses depending how big the scope is.
+
+<br/><img src="https://i.imgur.com/5FOWu1o.png"/>
+
+And if you check the "computers" folder in Active Directory Users and Computers you can now see you have the client computer. Here you can see any computers that are connected to your domain. These computers can login using any of the generated user accounts, which is our final step!
+
+<br/><img src="https://i.imgur.com/vKJ3aFP.png"/>
+
+Logout of the built-in user account in your client VM. Select "Other User" and enter your login info (You can play around with this and login in with any of the accounts you generated)
+
+<br/><img src="https://i.imgur.com/6HZ2nRT.png"/>
+
+<br/><img src="https://i.imgur.com/VSS8Nu2.png"/>
+
+Allow the system to start up :
+
+<br/><img src="https://i.imgur.com/pqVygQD.png"/>
+
+Congrats! Now that the system has booted up, you've completed this lab! 
+
+<br/><img src="https://i.imgur.com/XgoDp0s.png"/>
+
+Now you can play around with the server however you'd like! It is useful to go through this lab more than once to get a better understanding of an Active Directory environment. Try creating more servers along with this tutorial, eventually attempting to create and set up a server without the need for a walk-through. 
+
+Thank you for taking the time to read through this tutorial, I hope it was easy to follow and helped you understand Active Directory better! 
+
+
+
+
