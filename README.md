@@ -43,9 +43,9 @@ Project consists of creating an Active Directory environment using Oracle Virtua
 
 - <b>Oracle Virtual Box - You can install it here: https://www.virtualbox.org/wiki/Downloads<b>
  
-- <b>Windows Server ISO: -</b>
+- <b>Windows Server ISO: https://mega.nz/file/K6A1nb5Q#YEipCtNX_YYSZER1XucDxrsLVjr-6YBmjTamX42lI68 -</b>
   
-- <b>Windows 10 ISO: -</b>
+- <b>Windows 10 ISO: https://mega.nz/file/3zRQFbbS#LP2w9fOswWahn-OoSzgEAnnjSbaarVmacGKBz5Qiyjk -</b>
 
 - <b>PowerShell Script (1000+ Users): https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa0w0c3dJLXZUZVEteTlSZl82eEdzMWJLVDRrZ3xBQ3Jtc0trUnpnMGNOVW1ydVRpbkRlaUZtYmhCekZKeUI1NlNDX0huZG41NVlvT1FrRWhxMWN5bmNRbVFweEtTR1Blb1pNbllJdEQ4am9NRmZzVjFhZmRKSjFUbTB5WjZlYzBmMGU2bjcyY21IZ1VEbnVtVEtmNA&q=https%3A%2F%2Fgithub.com%2Fjoshmadakor1%2FAD_PS%2Farchive%2Frefs%2Fheads%2Fmaster.zip&v=MHsI8hJmggI </b>
 
