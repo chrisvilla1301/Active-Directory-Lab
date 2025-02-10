@@ -245,7 +245,7 @@ Your Admin account is created, now you just need to configure it into an admin a
 
 <br/><img src="https://i.imgur.com/QIMbguR.png"/>
 
-Right click on your account and hit "Properties"
+Right click on your account and hit "Properties". This is where you would configure user accounts, permissions, and add or remove users to groups, etc.
 
 <br/><img src="https://i.imgur.com/a4IC7sU.png"/>
 
@@ -272,7 +272,7 @@ Log out and select "Other user" and enter your login info :
 
 <br/><img src="https://i.imgur.com/PnCOsSB.png"/>
 
-Now we're signed in to our Admin account!
+Now we're signed in to our Admin account and you can see it pulled my name from Active Dircetory :
 
 <br/><img src="https://i.imgur.com/kQ1BpBx.png"/>
 
