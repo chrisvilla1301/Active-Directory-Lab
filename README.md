@@ -41,15 +41,15 @@ Project consists of creating an Active Directory environment using Oracle Virtua
 
 <h2>What you will need before we start:</h2>
 
-- <b>Oracle Virtual Box - You can install it here: https://www.virtualbox.org/wiki/Downloads<b>
+- <b>Oracle Virtual Box Download Link: https://www.virtualbox.org/wiki/Downloads<b>
  
-- <b>Windows Server ISO: https://mega.nz/file/K6A1nb5Q#YEipCtNX_YYSZER1XucDxrsLVjr-6YBmjTamX42lI68 -</b>
+- <b>Windows Server ISO Download Link: https://mega.nz/file/K6A1nb5Q#YEipCtNX_YYSZER1XucDxrsLVjr-6YBmjTamX42lI68 </b>
   
-- <b>Windows 10 ISO: https://mega.nz/file/3zRQFbbS#LP2w9fOswWahn-OoSzgEAnnjSbaarVmacGKBz5Qiyjk -</b>
+- <b>Windows 10 ISO Download Link: https://mega.nz/file/3zRQFbbS#LP2w9fOswWahn-OoSzgEAnnjSbaarVmacGKBz5Qiyjk </b>
 
-- <b>PowerShell Script (1000+ Users): https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa0w0c3dJLXZUZVEteTlSZl82eEdzMWJLVDRrZ3xBQ3Jtc0trUnpnMGNOVW1ydVRpbkRlaUZtYmhCekZKeUI1NlNDX0huZG41NVlvT1FrRWhxMWN5bmNRbVFweEtTR1Blb1pNbllJdEQ4am9NRmZzVjFhZmRKSjFUbTB5WjZlYzBmMGU2bjcyY21IZ1VEbnVtVEtmNA&q=https%3A%2F%2Fgithub.com%2Fjoshmadakor1%2FAD_PS%2Farchive%2Frefs%2Fheads%2Fmaster.zip&v=MHsI8hJmggI </b>
+- <b>PowerShell Script (1000+ Users) Download Link: https://mega.nz/file/aiZ0lArC#5nmi7DUXt0sUaFd_4XM4APrkLZizgj25c4TXNUhKtpk </b>
 
-Here is a diagraham of what we will be doing. Make sure to save this to help you while going through this lab : 
+Here is a diagram of what we will be doing. Make sure to save this to help you while going through this lab : 
 
 <br/><img src="https://i.imgur.com/KoGeluD.png"/>
 
@@ -99,7 +99,7 @@ Next go down to the "Network" tab. Select "Adapter 2", Check "Enable Network Ada
 
 You can now Power on the Virtual Machine.
 
-Once powered on the Windows Server ISO that was selected should boot up. If you did not select an ISO image before here you will be promted to select one.
+Once powered on the Windows Server ISO that was selected should boot up. If you did not select an ISO image before here you will be prompted to select one.
 
 Allow it to boot up and simply go through the set up / installation process. Installation may take a while, just allow it to do its thing. :
 
@@ -111,7 +111,7 @@ Once it has finished installing, allow the machine to boot up :
 
 <br/><img src="https://i.imgur.com/Jexfc5U.png"/>
 
-Awesome! Now that your Windows Server machine is runnning we're going to configure a few things in the network settings before doing anything else. Click on the mini computer icon on the bottom right of the VM and click the connected network. This should open up your network settings. :
+Awesome! Now that your Windows Server machine is runnning we're going to configure a few things in the network settings before doing anything else. Click on the mini network icon on the bottom right of the VM and click the connected network. This should open up your network settings. :
 
 <br/><img src="https://i.imgur.com/Hmd3ln9.png"/>
 
@@ -266,7 +266,7 @@ Your Admin account is now ready for use!
 <br/><img src="https://i.imgur.com/i5D7G0q.png"/>
 
 Now we're going to try logging into it.
-Log out and select "Other user" aand enter your login info :
+Log out and select "Other user" and enter your login info :
 
 <br/><img src="https://i.imgur.com/tSClyxS.png"/>
 
@@ -396,7 +396,15 @@ Now you can see both icons have turned green
 
 Next we will disable IE Enhanced Security only for the purpose of this lab. Normally you would not do this in a work environment.
 
+Click "Configure this local server" 
+
 <br/><img src="https://i.imgur.com/Qlqw14P.png"/>
+
+Then click "On" next to "IE Enhanced Security Configuration" 
+
+<br/><img src="https://i.imgur.com/WAV905u.png"/>
+
+Set everything to "Off" and click OK
 
 <br/><img src="https://i.imgur.com/y7bDDee.png"/>
 
@@ -474,7 +482,7 @@ Enter the name you typed into the script .txt file earlier and select "Find Now"
 
 <br/><img src="https://i.imgur.com/iiBRhIn.png"/>
 
-As you can see we have 2 user accounts that were found (if you used the same name). One user is the Domain Admin account we created earlier, and the other is our user account that was just created with our batch of users.
+As you can see we have 2 user accounts that were found (if you used the same name twice like I did). One user is the Domain Admin account we created earlier, and the other is our user account that was just created with our batch of users.
 We will be logging into our client VM using our new user account.
 
 <br/><img src="https://i.imgur.com/ejurxeo.png"/>
@@ -554,9 +562,9 @@ Once it has rebooted go through the setup :
 
 <br/><img src="https://i.imgur.com/QaE61JW.png"/>
 
-If promted to select an internet connection just click "I don't have internet"
+If prompted to select an internet connection just click "I don't have internet"
 
-Make sure to click "Limited experience" if you get this window so you aren't promted to create a Microsoft account. You want to keep it as a local / home account :
+Make sure to click "Limited experience" if you get this window so you aren't prompted to create a Microsoft account. You want to keep it as a local / home account :
 
 <br/><img src="https://i.imgur.com/BwdH4uD.png"/>
 
@@ -591,17 +599,15 @@ If you do not have a Default Gateway address this means you did not click "Add" 
 
 <br/><img src="https://i.imgur.com/AtXAFpT.png"/>
 
-Click the Start button and go to "System" 
+Once you have a Default Gateway click the Start button and go to "System" 
 
-Scroll down until you find "Rename this PC (advanced)" and click it. This should open the System Properties window. Click "Change".
-
-Here we are going to rename the PC to "CLIENT1" and also join the Domain. After you've renamed your PC select the "domain" option under "Member of". Enter your domain name and click OK. This should prompt you to enter a domain admin account. Enter your domain admin account you created earlier and click OK. 
-
-Allow the system to Restart :
+Scroll down until you find "Rename this PC (advanced)" and click it. This should open the System Properties window. Click "Change". :
 
 <br/><img src="https://i.imgur.com/1K0pa2J.png"/>
 
-<br/><img src="https://i.imgur.com/hcTNtnp.png"/>
+Here we are going to rename the PC to "CLIENT1" and also join the Domain. After you've renamed your PC select the "domain" option under "Member of". Enter your domain name and click OK. This should prompt you to enter a domain admin account. Enter your domain admin account you created earlier and click OK.
+
+Allow the system to Restart :
 
 <br/><img src="https://i.imgur.com/cYkLyfQ.png"/>
 
