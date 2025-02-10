@@ -7,7 +7,7 @@ Project consists of creating an Active Directory environment using Oracle Virtua
 
 - How to create Virtual Machines in Oracle Virtual Box
  
-- How to create a functional Windows Server
+- How to create a functional Windows Server / Domain Controller
   
 - How to promote a server to a domain
  
