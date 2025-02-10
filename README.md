@@ -43,7 +43,7 @@ Project consists of creating an Active Directory environment using Oracle Virtua
 
 - <b>Oracle Virtual Box Download Link: https://www.virtualbox.org/wiki/Downloads<b>
  
-- <b>Windows Server ISO Download Link: https://mega.nz/file/K6A1nb5Q#YEipCtNX_YYSZER1XucDxrsLVjr-6YBmjTamX42lI68 </b>
+- <b>Windows Server 2022 ISO Download Link: https://mega.nz/file/K6A1nb5Q#YEipCtNX_YYSZER1XucDxrsLVjr-6YBmjTamX42lI68 </b>
   
 - <b>Windows 10 ISO Download Link: https://mega.nz/file/3zRQFbbS#LP2w9fOswWahn-OoSzgEAnnjSbaarVmacGKBz5Qiyjk </b>
 
@@ -51,7 +51,7 @@ Project consists of creating an Active Directory environment using Oracle Virtua
 
 Here is a diagram of what we will be doing. Make sure to save this to help you while going through this lab : 
 
-<br/><img src="https://i.imgur.com/KoGeluD.png"/>
+<br/><img src="https://i.imgur.com/7R3dL88.jpeg"/>
 
 <h2>Lab walk-through:</h2>
 
