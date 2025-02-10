@@ -57,7 +57,7 @@ Here is a diagram of what we will be doing. Make sure to save this to help you w
 
 <p align="center">
 
-First we will start with creating our Windows Server and promoting it into a domain, which will be our Domain Controller.
+First we will start with creating our Windows Server and promoting it into a Domain Controller.
 
 Open Oracle Virtual Box and click "New". 
  
